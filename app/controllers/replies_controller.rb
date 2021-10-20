@@ -1,4 +1,5 @@
 class RepliesController < ApplicationController
+  skip_forgery_protection
   before_action :authenticate_user!
   before_action :set_reply, only: [:edit, :update, :show, :destroy]
   before_action :set_discussion, only: [:create, :edit, :show, :update, :destroy]
